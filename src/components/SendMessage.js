@@ -25,6 +25,7 @@ export const SendMessage = () => {
       para: chatState.chatActivo,
       mensaje
     })
+    
   }
 
   return (

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ChatContext } from "../context/chat/ChatContext";
 import { fetchConToken } from "../helpers/fetch";
+import { scrollToBottom } from "../helpers/scrollToBottom";
 import { types } from "../types/types";
 
 export const SidebarChatItem = ({usuario}) => {
@@ -18,7 +19,7 @@ export const SidebarChatItem = ({usuario}) => {
       type: types.cargarMensajes,
       payload: resp.mensajes
     })
-    
+    scrollToBottom('mensajes')
   };
 
   return (

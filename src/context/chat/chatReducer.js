@@ -35,6 +35,14 @@ export const chatReducer = (state, action) => {
         ...state,
         mensajes: [...action.payload]
       }
+    
+    case types.limpiarMensajes:
+      return {
+        uid: '',
+        chatActivo: null,
+        usuarios: [],
+        mensajes: []
+      }
 
     default:
       return state

@@ -41,9 +41,9 @@ export const SocketProvider = ({ children }) => {
         type: types.nuevoMensaje,
         payload: mensaje
       })
+      scrollToBottonAnimated('mensajes');
     })
 
-    scrollToBottonAnimated('mensajes');
 
   },[socket, dispatch])
 

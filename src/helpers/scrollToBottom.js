@@ -8,8 +8,8 @@ export const scrollToBottom = (id) => {
   })
 }
 
-export const scrollToBottonAnimated = (id) => {
-  animateScroll.scrollToBottom('mensajes', {
+export const scrollToBottonAnimated = (id) => {  
+  animateScroll.scrollToBottom({
     containerId: id,
     duration: 250
   })
