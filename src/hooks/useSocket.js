@@ -6,11 +6,17 @@ export const useSocket = (serverPath) => {
   const [socket, setSocket] = useState(null);
   const [online, setOnline] = useState(false);
 
-  const conectarSocket = useCallback(() => {    
+  const conectarSocket = useCallback(() => {
+
+    const token = localStorage.getItem('token')
+
     const socketTemp = io.connect(serverPath, {
       transports: ['websocket'],
       autoConnect: true, // info adicional
-      forceNew: true // Se crea una nueva coneccion para que no use la coneccion anterior
+      forceNew: true, // Se crea una nueva coneccion para que no use la coneccion anterior
+      query: { // Enviando queris en los sockets
+        'x-token': token
+      }
     })
 
     setSocket(socketTemp)
