@@ -24,7 +24,7 @@ export const SidebarChatItem = ({usuario}) => {
 
   return (
     <div
-      className={`chat_list ${(usuario.uid === chatActivo)? 'active_chat' : ''}`} //Condicion que determina que chat mostrar si esta activo en el chatContext (porque sin eso no se sabe de quien es el chat)
+      className={`chat_list ${(usuario.uid === chatActivo)? 'active_chat' : ''}`}
       onClick={onClick}
     >
     {/* active_chat */}

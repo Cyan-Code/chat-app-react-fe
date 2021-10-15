@@ -6,9 +6,9 @@ export const ChatContext = createContext();
 
 const initialState = {
   uid: '',
-  chatActivo: null, //UID al usuario al que quiero enviar msg
-  usuarios: [], // Al users in the DB
-  mensajes: [] // The chat selected
+  chatActivo: null,
+  usuarios: [],
+  mensajes: []
 }
 
 export const ChatProvider = ({ children }) => {

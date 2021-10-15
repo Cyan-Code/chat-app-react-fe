@@ -11,7 +11,7 @@ export const Sidebar = () => {
   return (
     <div className="inbox_chat">      
       {
-        chatState.usuarios  // Uso del filter y el map consecutivamente
+        chatState.usuarios
         .filter( user => user.uid !== uid)                  
         .map( (usuario) => (
           <SidebarChatItem

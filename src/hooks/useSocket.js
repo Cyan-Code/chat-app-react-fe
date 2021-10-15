@@ -12,18 +12,17 @@ export const useSocket = (serverPath) => {
 
     const socketTemp = io.connect(serverPath, {
       transports: ['websocket'],
-      autoConnect: true, // info adicional
-      forceNew: true, // Se crea una nueva coneccion para que no use la coneccion anterior
-      query: { // Enviando queris en los sockets
+      autoConnect: true,
+      forceNew: true,
+      query: {
         'x-token': token
       }
     })
-
     setSocket(socketTemp)
   }, [serverPath])
 
   const desconectarSocket = useCallback(() => {
-      socket?.disconnect();    
+      socket?.disconnect();
   }, [socket])
 
   useEffect(() => {

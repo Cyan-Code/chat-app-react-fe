@@ -25,7 +25,7 @@ export const LoginPage = () => {
     }
   }, [])
 
-  const onChange = ({target}) => {  //formas de manejar el input
+  const onChange = ({target}) => {
     const {name, value} = target;
     setForm({
       ...form,
@@ -99,7 +99,7 @@ export const LoginPage = () => {
               id="ckb1"        
               type="checkbox"
               name="rememberme"
-              checked = {form.rememberme} // Como controlar un checkBox en react
+              checked = {form.rememberme}
               readOnly
             />
             <label className="label-checkbox100">Recordarme</label>

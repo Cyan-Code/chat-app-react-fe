@@ -77,8 +77,7 @@ export const AuthProvider = ({children}) => {
         logged: true,
         nombre,
         email
-      });
-      console.log('authcontext autenticado');
+      });      
       return true
     } else {
       setAuth({

@@ -19,13 +19,11 @@ export const SendMessage = () => {
     if (mensaje.length === 0) { return; }
     setMensaje('')
     
-    // Emitir evento de sockets para enviar el mensaje
-    socket.emit('mensaje-personal', { // Enviando mensajes 1 a 1
+    socket.emit('mensaje-personal', {
       de: auth.uid,
       para: chatState.chatActivo,
       mensaje
     })
-    
   }
 
   return (

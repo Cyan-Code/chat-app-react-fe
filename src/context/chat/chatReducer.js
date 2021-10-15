@@ -10,7 +10,7 @@ export const chatReducer = (state, action) => {
         usuarios: [ ...action.payload ]
       }
     case types.activarChat:
-      if(state.chatActivo === action.payload) return state; // Puedo hacer esto
+      if(state.chatActivo === action.payload) return state;
       return {
         ...state,
         chatActivo: action.payload,

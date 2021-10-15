@@ -35,7 +35,7 @@ export const SocketProvider = ({ children }) => {
     })
   },[socket, dispatch])
 
-  useEffect(() => { // Escuchando los mensajes que me enviaron y modificar el estado
+  useEffect(() => {
     socket?.on('mensaje-personal', (mensaje) => {
       dispatch({
         type: types.nuevoMensaje,
@@ -43,8 +43,6 @@ export const SocketProvider = ({ children }) => {
       })
       scrollToBottonAnimated('mensajes');
     })
-
-
   },[socket, dispatch])
 
   return (
